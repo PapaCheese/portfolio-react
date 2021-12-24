@@ -29,7 +29,9 @@ function App() {
   return (
     <div className="App">
       <Nav setPage={setPage} />
-      {getPage(page)}
+      <div id='main-container'>
+        {getPage(page)}
+      </div>
       {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
