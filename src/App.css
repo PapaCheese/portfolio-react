@@ -1,38 +1,156 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #282c34;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+}
+
+ ::-webkit-scrollbar-track {
+    background: none;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+    background: #555;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1e2229;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-spacer {
+    flex-grow: 0.8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav a {
+    text-decoration: none;
+    font-size: 28px;
+    padding: 16px;
+    border-radius: 4px;
+    transition: 100ms ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+nav a:hover {
+    background-color: white;
+    color: black;
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr {
+    margin: 0 auto;
+    width: 15%;
+}
+
+.home-title {
+    margin-top: 10vh;
+    margin-left: 48px;
+    text-align: start;
+    font-size: 18vh;
+    font-weight: 600;
+}
+
+.home-subtitle {
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 48px;
+    text-align: start;
+    font-size: 6vh;
+}
+
+.projects .container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 16px;
+}
+
+.projects .item {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 16px;
+    border-radius: 4px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.projects .item .title {
+    margin: 16px 0;
+    font-size: 32px;
+}
+
+.projects .item hr {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 50%;
+}
+
+.projects .item .description {
+    padding: 8px;
+    font-size: 18px;
+    text-align: start;
+    line-height: 26px;
+    height: 150px;
+    overflow: scroll;
+}
+
+.projects .item .extra-info {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 8px;
+    font-size: 18px;
+}
+
+.video-responsive {
+    height: 200px;
+}
+
+.video-responsive iframe {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1600px) {
+    .projects .container {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .projects .container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .projects .container {
+        grid-template-columns: 100%;
+    }
+    .home-title {
+        margin-top: 32px;
+        margin-left: 32px;
+        font-size: 15vw;
+    }
+    .home-subtitle {
+        margin-left: 32px;
+        font-size: 5vw;
+    }
+    nav a {
+        font-size: 22px;
+    }
+    nav a:hover {
+        font-size: 24px;
+    }
 }
